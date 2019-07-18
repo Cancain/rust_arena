@@ -15,7 +15,7 @@ fn main() {
         alive: false,
     };
 
-    let game_on = true;
+    let mut game_on = true;
     
     let mut player = Player {
         character: dummy_character,
@@ -26,8 +26,9 @@ fn main() {
     println!("Welcome to the arena!");
 
     while game_on {
+        println!("Player name: {}", player.character.name);
         if player.character.alive == false {
-           player.character = characters::start_new_player_character();
+           player.character = characters::start_new_player_character(game_on);
         } else {
             println!("Your character is {}", player.character.name)
         }
