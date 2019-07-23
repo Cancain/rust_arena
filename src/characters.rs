@@ -17,7 +17,7 @@ fn name_character() -> String {
     name
 }
 
-pub fn start_new_player_character(game_on: bool) -> Character {
+pub fn start_new_player_character(mut game_on: bool) -> Character {
     let mut name = String::from("");
     let mut alive = false;
 
@@ -47,4 +47,8 @@ pub fn start_new_player_character(game_on: bool) -> Character {
     };
 
     character
+}
+
+pub fn generate_enemy_npc() {
+    println!("new npc");
 }
