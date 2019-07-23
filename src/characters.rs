@@ -49,6 +49,13 @@ pub fn start_new_player_character(mut game_on: bool) -> Character {
     character
 }
 
-pub fn generate_enemy_npc() {
+pub fn generate_enemy_npc() -> Character {
     println!("new npc");
+    let npc = Character {
+        name: String::from("Enemy"),
+        health: 100,
+        alive: true,
+    };
+
+    npc
 }
